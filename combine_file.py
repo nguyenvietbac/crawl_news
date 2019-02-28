@@ -3,7 +3,7 @@ import os
 print("save old file")
 
 file_out = []
-###########################3
+###########################
 if os.stat("dantri.json").st_size != 0:
 	with open("dantri.json", "r") as f:
 		file_data = json.load(f)
@@ -75,5 +75,34 @@ if os.stat("vib.json").st_size != 0:
 with open("old_vib.json", "w") as f:
 	json.dump(file_data, f, indent=4)
 # file_out.extend(file_data)
+######################################
+if os.stat("reuters.json").st_size != 0:
+	with open("reuters.json", "r") as f:
+		file_data = json.load(f)
+
+with open("old_reuters.json", "w") as f:
+	json.dump(file_data, f, indent=4)
+######################################
+if os.stat("economist.json").st_size != 0:
+	with open("economist.json", "r") as f:
+		file_data = json.load(f)
+
+with open("old_economist.json", "w") as f:
+	json.dump(file_data, f, indent=4)
+######################################
+if os.stat("imf.json").st_size != 0:
+	with open("imf.json", "r") as f:
+		file_data = json.load(f)
+
+with open("old_imf.json", "w") as f:
+	json.dump(file_data, f, indent=4)
+######################################
+if os.stat("fed.json").st_size != 0:
+	with open("fed.json", "r") as f:
+		file_data = json.load(f)
+
+with open("old_fed.json", "w") as f:
+	json.dump(file_data, f, indent=4)
+######################################
 print("old file saved")
 
